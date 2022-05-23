@@ -1,0 +1,81 @@
+
+<!-- 
+Como organizar os temas de matérias do site e temos que estar bem atentos para fazer a combinação delas para que os conteudos esteja relacionados com seus 
+titulos mesmo que vc venha ter mais de uma materia na mesma página tudo isso para que os robos de busca catalogarem as materias separadamente apontando
+para sua página da melhor forma possível.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seções e artigos</title>
+</head>
+<body>
+
+    <!-- Pagina de noticias onde vc tem varias noticias de varios temas, que podem ser agrupadas em seções, por exemplo varias de esportes, formula 1, futebol, etc
+    e em outra seção da mesma página noticias relacionadas a economia, por exemplo cotação do dólar , evoluçao da bolsa de valores e para organizar de forma interessante
+      que os robos possam catalogar da melhor forma possível vc deve organizar o conteúdo na sua página. Mesmo que seu site não seja de noticia e vc tenha uma unica página,  
+      com um unica materia organize em uma unica seção o seu artigo vai ficar mais organizada e os buscadores quando vc faz uso destas marcações mesmo que seja uma
+       eles dão um valor melhor para essa página, paginas bem construidas e os robos conseguem identificar isso por meio do uso das marcações tem um pouquinho mais de vantagem
+       em comparação com as que não fazem uso destes recursos.
+    
+    1 - Se vc tem várias seções no seu site, vc vai criar para cada seção uma marcação ou objeto ou uma tag 
+        <section></section>
+    2- Primeira Seção colocamos o <header> que será o cabeçalho da seção
+        
+    3 - Primeira Seção de esportes para isso usamos h1 para colocar o titulo
+
+    4 - Agora podemos ter a materia ou o artigo com a tag <article>
+
+    5 - E cada <article> pode ter um <header> tambem com o titulo
+    
+    6 - E depois os paragrafos
+
+    Agora do ponto de vista semântico está bem organizada para os robos de busca 
+-->
+
+<section>
+    <header>
+        <h1>Esportes</h1>
+    </header>
+    <article>
+        <header>
+            <h2>Formula 1</h2>
+        </header>
+        <p>A temporada de fórmula 1 já começou.</p>
+        <p>Acesse o ranking dos pilotos.</p>
+    </article>
+
+    <article>
+        <header>
+            <h2>Futebol</h2> 
+        </header>
+        <p>Acesse a tabela do campeonato Brasileiro.</p>
+        <p>Clique para ver os resultados da semana.</p>
+    </article>
+</section>
+
+<section>
+    <header>
+        <h1>Economia</h1>
+    </header>
+    <article>
+        <h2>Bolsa de valores</h2>
+        <p>Bolsa acumula baixa no mês.</p>
+    </article>
+
+    <article>
+        <header>
+            <h2>Dólar</h2>
+        </header>
+        <p>Tá complicado viajar assim hein!</p>
+    </article>
+</section>
+    
+</body>
+</html>
+
+ 

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura Semântica</title>
+    <style>
+        .flutuarEsquerda {
+            float: left;
+        }
+
+        .meuDivTopo {
+            background-color: #ff0000;
+            height: 150px;
+        }
+
+        .meuDivLateral {
+            height: 100px;
+            float: right;
+        }
+
+    
+    </style>
+</head>
+<body>
+
+    <!-- Estrutura crua da página como o site deve ser construido -->
+    <!--Notar como esta página fala sobre o curso de lógica de programação, ou seja TEMA PRINCIPAL  essas palavras foram usadas várias vezes -->
+
+    <!-- Topo da página -->
+
+    <header>
+        <div class="meuDivTopo">
+            <figure>
+                <img src="/SoftBlue/assets/logo.png" 
+                alt="Logotipo MFJCode"
+                class="flutuarEsquerda" width="150" height="150">
+            </figure>
+
+            <!-- Menu principal do site -->
+
+            <nav>
+                <a href="#">EMPRESA</a>
+                <a href="#">CURSOS</a>
+                <a href="#">CONTATO</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Menu Secundário Relacionado com o tema da matéria não com o menu do site -->
+
+    <aside>
+        <div class="meuDivLateral"> 
+            <a href="#">Como funciona?</a> <br>
+            <a href="#">Certificado</a> <br>
+            <a href="#">Nossos Instrutores</a> <br>
+        </div>
+    </aside>
+
+
+   <section>
+    <article>
+        <header>
+            <h1> Curso de lógica de Programação </h1>
+        </header>
+        <p>
+            Quer aprender com qualidade? Venha fazer parte dos melhores, venha aprender a programare na softblue, em nosso <strong> curso de lógica de programação </strong>.
+        </p>
+        <figure>
+            <img src="/SoftBlue/assets/logica.png" alt="Curso de lógica de programação" width="300" height="300">
+            <figcaption>Curso de Lógica de Programação da Softblue</figcaption>
+        </figure>
+    </article>
+
+   </section>
+
+    <!--Rodapé da página -->
+    <footer>
+       &copy; MFJCode  - Todos os direitos reservados
+
+    </footer>
+    
+</body>
+</html>

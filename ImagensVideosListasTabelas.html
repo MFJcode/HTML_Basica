@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Videos Listas e Tabelas</title>
+</head>
+<body>
+
+    <h1>Imagens</h1>
+
+    <img src="/SoftBlue/assets/imagemEnfeite.jpg" alt="Prateleira do Conhecimento"> <!-- Imagem sem conteudo semântico meramente decorativa -->
+
+    <!-- Para imagnes relacionadas com o conteudo e que tem um valor semêntico é melhor usar a tag figure que passa uma informação mais relevante para o motores de busca -->
+
+    <figure>
+        <a href="https:www.youtube.com/user/softbluecursos" > <!-- Colocamos um link para imagem -->
+        <img src="/SoftBlue/assets/sbv2_brasilMap.png" alt="">
+        <figcaption>Softblue: de Curitiba para todo o Brasil</figcaption> <!-- Os buscadores vão relacionar a imagem com a legenda -->
+        </a>
+    </figure>
+
+    <h1>Vídeos</h1>
+
+    <!-- Duas formas principais para inserir videos-->
+    <!-- 1 forma -->
+    <video width="320" height="180" controls>
+        <source src="/SoftBlue/assets/seuVideo.mp4" type="video/mp4">
+        <source src="/SoftBlue/assets/seuVideo.mpeg" type="video/mpeg"> <!-- Caso o usuario não consiga tocar em MP4 -->
+        Seu navegador não suporta esse video. <!--  Mensagem que vai aparecer caso mesmo assim não consiga tocar os dois videos -->
+
+    </video>
+
+    <br>
+    <!-- 2 forma não tem o video em mãos e quer colocar um video do yotube -->
+
+
+    <iframe width="320" height="180" src="https://www.youtube.com/embed/pMMkpmpKTo0" title="YouTube video player" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+    
+<h1>Listas</h1>
+
+<ul>
+    <li>HTML</li>
+        <ul> <!-- Sublista -->
+            <li>Marcações</li>
+            <li>Criação de Links</li>
+        </ul>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>Ajax</li>
+    
+</ul>
+
+<ol>
+    <li>McLaren</li>
+    <li>Ferrari</li>
+    <li>Red Bull</li>
+</ol>
+
+<h1>Tabelas</h1>
+
+<table border="1"> <!-- Podemos formatar melhor pelo CSS mas agora para aparecer algo podemos usar o atributo order-->
+
+    <caption>Relatório dos Pilotos da Formula 1</caption> <!-- Usado pelos buscadores do Google para atrelar os dados da tabela -->
+    <tr> <!-- Para criar uma linha em inglês Table Row -->
+        <th>Nome do Piloto </th> <!-- Aqui criamos quantas colunas desejamos TH uma coluna destacada ou usar como titulo isso deixa a tabela semântica para os buscadores que aqui é o titulo principal -->
+        <th>Pontuação</th>
+        <th>Ativo</th>
+        <th>Equipe</th>
+    </tr> 
+    <tr> <!-- Segunda linha e agora usamos TD para criar as colunas sem destaque apenas com os dados e aqui os buscadores sabem que é apenas dados  -->
+        <td>Lewis</td>
+        <td>40</td>
+        <td>Sim</td>
+        <td>Mercedes</td>
+    </tr>
+
+    <tr>
+        <td>Nico</td>
+        <td>45</td>
+        <td>Sim</td>
+        <td>Mercedes</td>
+    </tr>
+
+    <tr>
+        <td>Felipe</td>
+        <td>46</td>
+        <td>Sim</td>
+        <td>Ferrari</td>
+    </tr>
+
+    <tr>
+        <td>Vettel</td>
+        <td>49</td>
+        <td>Sim</td>
+        <td>Ferrari</td>
+    </tr>
+
+</table>
+
+
+
+<br>
+
+<table border="1"> 
+
+    <caption>Relatório dos Pilotos da Formula 1</caption> 
+
+    <!-- Como fazer para juntar duas celulas por exemplo temos repetido Mercedes e Ferrari e apenas uma celula-->
+    <!-- rowspan MESCLA CELULAS VERTICALMENTE E colspan MESCLA CELULAS HORIZONTALMENTE EPARA ISSO PRECISAMOS DELETAR OS DADOS DAS CELULAS DE BAICO OU DO LADO  -->
+    <tr> 
+        <th>Nome do Piloto </th>
+        <th>Pontuação</th>
+        <th>Ativo</th>
+        <th>Equipe</th>
+    </tr> 
+    <tr> 
+        <td>Lewis</td>
+        <td>40</td>
+        <td>Sim</td>
+        <td rowspan="2">Mercedes</td> <!-- Apagamos a informaçao da segunda linha e usamos aqui o atributo de rowspan="2"-->
+    </tr>
+
+    <tr>
+        <td>Nico</td>
+        <td>45</td>
+        <td>Sim</td>
+
+    </tr>
+
+    <tr>
+        <td>Felipe</td>
+        <td>46</td>
+        <td>Sim</td>
+        <td rowspan="2">Ferrari</td>
+    </tr>
+
+    <tr>
+        <td>Vettel</td>
+        <td>49</td>
+        <td>Sim</td>
+    
+    </tr>
+
+</table>
+
+<br>
+
+<table border="1"> 
+
+    <caption>Relatório dos Pilotos da Formula 1</caption> 
+
+    <!-- Agora temos que todos os pilotos estão ativos como mesclar essas celulas ? -->
+    <tr> 
+        <th>Nome do Piloto </th>
+        <th>Pontuação</th>
+        <th>Ativo</th>
+        <th>Equipe</th>
+    </tr> 
+    <tr> 
+        <td>Lewis</td>
+        <td>40</td>
+        <td rowspan="4">Sim</td>
+        <td rowspan="2">Mercedes</td> <!-- Apagamos a informaçao da segunda linha e usamos aqui o atributo de rowspan="2"-->
+    </tr>
+
+    <tr>
+        <td>Nico</td>
+        <td>45</td>
+
+
+    </tr>
+
+    <tr>
+        <td>Felipe</td>
+        <td>46</td>
+
+        <td rowspan="2">Ferrari</td>
+    </tr>
+
+    <tr>
+        <td>Vettel</td>
+        <td>49</td>
+
+    
+    </tr>
+
+</table>
+
+<br>
+
+<table border="1"> 
+
+    <caption>Relatório dos Pilotos da Formula 1</caption> 
+
+    <!-- Agora como juntar duas colunas por exemplo o Nico está desqualificado -->
+    <tr> 
+        <th>Nome do Piloto </th>
+        <th>Pontuação</th>
+        <th>Ativo</th>
+        <th>Equipe</th>
+    </tr> 
+    <tr> 
+        <td>Lewis</td>
+        <td>40</td>
+        <td rowspan="4">Sim</td>
+        <td rowspan="2">Mercedes</td> 
+    </tr>
+
+    <tr>
+        <td colspan="2">DESQUALIFICADO</td> <!-- Colocamos o atributo colspan="2" e deletamos a o coluna do lado que tinha o valor 45 -->
+    </tr>
+
+    <tr>
+        <td>Felipe</td>
+        <td>46</td>
+
+        <td rowspan="2">Ferrari</td>
+    </tr>
+
+    <tr>
+        <td>Vettel</td>
+        <td>49</td>
+
+    
+    </tr>
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+
+    <!-- method tipo de comunicação aberta com o servidor web pode ser do tipo get menos seguro ou post considerado mais seguro -->
+    <!-- action o endereço de destino para onde os dados devem ser enviados se por exemplo vc programa em PHP vai ter uma pagina chamada receberDados.php é 
+    para ela que vc pode redirecionar o envio do seu formulario e nela vc vai realizar o tratamento e o recebimento destas informações para processar
+    gravar no banco de dados ou fazer a ação que vc achar mais pertinente. Mas aqui apenas por exemplo por que não vamos criar esta comunicação neste curso
+    apenas vamos aprender a como contruir ou montar o formulário. 
+
+    Em um exemplo real poderiamos usar: form method="post" action="receberDados.php"
+
+    Também para testar os dados que estão sendo preenchido podemos usar  form method="get" action="?" envia para a propria pagina na barra de endereço do 
+    navegador    
+    -->
+    <form method="get" action="?"> 
+        <label for="">Nome:</label>
+        <input type="text" name="campoNome" placeholder="Insira aqui o seu nome"> <!-- atributo name usado do lado servidor para processar o formulario e saber que a informação nome foi digitado em um campo 
+            chamado campoNome, assim a label nome não será enviada para o servidor e sim o campoNome -->
+        <br>
+        <label for="">Idade:</label>
+        <input type="number" name="campoIdade" min="0" max="115"  placeholder="Digite sua Idade">
+        <br>
+        <label for="">Sexo:</label>
+        <input type="radio" name="campoSexo" value="M"> Masculino <!-- Precisa ter o mesmo nome de campo para escolher apenas uma opção -->
+        <input type="radio" name="campoSexo" value="F"> Feminino <!-- Para saber qual campo foi escolhido precisamos do atributo value por que este valor será 
+        enviado para o processamento de uma linguagem web -->
+        <br>
+        <label for="">Interesses:</label>
+        <br>
+        <input type="checkbox" name="campoAutomovel"> Automóveis <!-- no campo name não usar Acentuação de palavras -->
+        <br>
+        <input type="checkbox" name="campoBarco"> Barcos
+        <br>
+        <input type="checkbox" name="campoAviao"> Aviões
+        <br>
+        <label for="">Estado Civil:</label>
+        <select name="campoEstadoCivil" id="">
+        <option value="S">Solteiro(a)</option>
+        <option value="C">Casado(a)</option>
+        <option value="D">Divorciado(a)</option> <!-- Quando enviado aparece campoEstadoCivil=Divorciado%28a%29 esse %28 é a abertura do parenteses  e o %29 fechamento 
+        agora com o atributo value podemos alterar e quando selecionado aparece a letra D campoEstadoCivil=D-->
+        <option value="V">Viúvo(a)</option>
+        </select>
+        <br>
+        <input type="reset" value="Limpar os dados">
+        <input type="submit" value="Enviar os dados">
+
+
+    </form>
+    
+</body>
+</html>
+
+
